@@ -4,21 +4,22 @@ Main module for package.
 This module contains the core functionality of the application.
 """
 
-import requests
 from typing import Union
+
+import requests
 
 
 def add_numbers(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
     """
     Adds two numbers together.
-    
+
     Args:
         a: First number
         b: Second number
-        
+
     Returns:
         The sum of a and b
-        
+
     Example:
         >>> add_numbers(2, 3)
         5
@@ -31,16 +32,16 @@ def add_numbers(a: Union[int, float], b: Union[int, float]) -> Union[int, float]
 def fetch_data(url: str) -> dict:
     """
     Fetches data from a URL and returns it as JSON.
-    
+
     Args:
         url (str): The URL to fetch data from
-        
+
     Returns:
         dict: The JSON response as a dictionary
-        
+
     Raises:
         requests.RequestException: If the request fails
-        
+
     Example:
         >>> data = fetch_data("https://api.github.com/users/octocat")
         >>> print(data["login"])
@@ -54,7 +55,7 @@ def fetch_data(url: str) -> dict:
 if __name__ == "__main__":
     # Example usage when running the module directly
     print(f"2 + 3 = {add_numbers(2, 3)}")
-    
+
     # Example API call (commented out to avoid making requests during testing)
     # try:
     #     github_data = fetch_data("https://api.github.com/users/octocat")

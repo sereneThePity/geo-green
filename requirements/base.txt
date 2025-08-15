@@ -1,4 +1,4 @@
- 
+
 # Core dependencies for the application
 requests>=2.28.0
 click>=8.0.0

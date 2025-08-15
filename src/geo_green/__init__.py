@@ -1,4 +1,3 @@
- 
 """
 Geo Green - A Python project for geospatial data processing with a focus on green spaces.
 

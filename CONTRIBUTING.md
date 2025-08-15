@@ -1,4 +1,4 @@
- 
+
 # Contributing to Your Project Name
 
 Thank you for your interest in contributing to this project! This document provides guidelines for contributing.
@@ -53,10 +53,10 @@ Unsure where to begin contributing? You can start by looking through `beginner` 
 2. Create a virtual environment:
    ```bash
    python -m venv venv
-   
+
    # On Windows:
    venv\Scripts\activate
-   
+
    # On macOS/Linux:
    source venv/bin/activate
    ```

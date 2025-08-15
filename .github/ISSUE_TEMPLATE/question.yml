@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         Thanks for your question! Please provide as much detail as possible to help us give you the best answer.
-  
+
   - type: textarea
     id: question
     attributes:
@@ -17,19 +17,19 @@ body:
       placeholder: I'm trying to understand how to...
     validations:
       required: true
-  
+
   - type: textarea
     id: context
     attributes:
       label: Context
       description: What are you trying to accomplish? What have you already tried?
       placeholder: |
-        I'm working on... 
+        I'm working on...
         I've tried...
         I expected...
     validations:
       required: true
-  
+
   - type: textarea
     id: code-example
     attributes:
@@ -39,11 +39,11 @@ body:
       placeholder: |
         # Your code here
         import geo_green
-        
+
         # What you're trying to do...
     validations:
       required: false
-  
+
   - type: textarea
     id: environment
     attributes:

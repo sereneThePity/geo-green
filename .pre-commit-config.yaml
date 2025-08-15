@@ -21,27 +21,43 @@ repos:
     hooks:
       - id: black
         language_version: python3
-        args: [--line-length=88]
+        args: ["--line-length=88"]
 
   # isort import sorter
   - repo: https://github.com/pycqa/isort
     rev: 5.12.0
     hooks:
       - id: isort
-        args: [--profile=black]
+        args: ["--profile=black"]
 
-  # Flake8 linter
+  # Flake8 linter (relaxed docstring rules)
   - repo: https://github.com/pycqa/flake8
     rev: 6.0.0
     hooks:
       - id: flake8
         additional_dependencies: [flake8-docstrings]
-        args: [--max-line-length=88, --extend-ignore=E203,W503]
+        args:
+          [
+            "--max-line-length=88",
+            "--extend-ignore=E203,W503,D104,D100,D101,D102",
+          ]
+          # Ignores:
+          # E203: Black-compatible slicing
+          # W503: line break before binary operator
+          # D104: missing docstring in __init__.py
+          # D100: missing docstring in module
+          # D101/D102: missing docstring in class/method
 
-  # MyPy type checker
+  # MyPy type checker (strict in src/, loose in tests/)
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.3.0
     hooks:
       - id: mypy
-        args: [--ignore-missing-imports]
+        args:
+          [
+            "--ignore-missing-imports",
+            "--check-untyped-defs",
+            "--disallow-untyped-defs",
+            "src",
+          ]
         additional_dependencies: [types-requests]
