@@ -1,0 +1,58 @@
+name: Question
+description: Ask a question about the project
+title: "[QUESTION]: "
+labels: ["question", "needs-response"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question! Please provide as much detail as possible to help us give you the best answer.
+  
+  - type: textarea
+    id: question
+    attributes:
+      label: What's your question?
+      description: Please describe your question in detail.
+      placeholder: I'm trying to understand how to...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to accomplish? What have you already tried?
+      placeholder: |
+        I'm working on... 
+        I've tried...
+        I expected...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: code-example
+    attributes:
+      label: Code Example (if applicable)
+      description: If your question involves code, please provide a minimal example.
+      render: python
+      placeholder: |
+        # Your code here
+        import geo_green
+        
+        # What you're trying to do...
+    validations:
+      required: false
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Information about your setup
+      placeholder: |
+        - OS: [e.g. Windows 11, macOS 13, Ubuntu 20.04]
+        - Python version: [e.g. 3.9.7]
+        - Package version: [e.g. 0.1.0]
+      render: markdown
+    validations:
+      required: false
