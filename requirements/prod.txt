@@ -1,0 +1,5 @@
+# Production dependencies only
+-r base.txt
+
+# Production-specific packages (if any)
+# gunicorn>=20.1.0  # Example: web server for deployment
